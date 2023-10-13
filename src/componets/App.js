@@ -3,16 +3,27 @@ import './App.css';
 import Header from "./Header";
 import AddContact from "./AddContact"
 import ContactList from "./ContactList"
-import ContactCard from "./ContactCard"
 
 function App() {
+  const contacts =[
+    {
+      id: "1",
+      name:"vinayak",
+      email:"vinayakvasudev0@gmail.com"
+    },
+    {
+      id:"2",
+      name:"roy",
+      email:"roy@gmail.com"
+    }
+  ]
   return (
-    <div>Hello how are you world and hats up
-      <div>
-        <h1>welcome</h1>
-        <h2>how are you</h2>
-        <h2>12/10 first day</h2>
-      </div>
+    <div className="ui container">
+      <Header />
+      <br></br>
+      <br></br>
+      <AddContact />
+      <ContactList contacts={contacts} />
     </div>
   );
 }
